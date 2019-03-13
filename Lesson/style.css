@@ -70,3 +70,9 @@ div.header > span {
     font-weight: 600;
     margin: 10px 0;
 }
+.btn:hover {
+    background-color: darkred;
+}
+.input:focus {
+    background: orangered;
+}
