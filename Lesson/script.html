@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Script</title>
+    <script>
+        let Km=35;
+        let cost=1.57;
+        let R=6;
+        let month=28;
+
+        let KmMonth=Km*month;
+        console.log("Километров в Февраль месяц: " + KmMonth)
+
+        let KMDay=Km/100;
+        let OilDay=KMDay*R;
+        let OilMonth=OilDay*month;
+
+        console.log("Литров в месяц: " + OilMonth)
+
+        let Zatraty=OilMonth*cost;
+
+        console.log("Затраты в месяц: " + Zatraty + " Бел.Руб")
+
+    </script>
+</head>
