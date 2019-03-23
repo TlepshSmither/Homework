@@ -23,4 +23,45 @@
         console.log("Затраты в месяц: " + Zatraty + " Бел.Руб")
 
     </script>
+    <script>
+        let sum = 300;
+        for (let i = 1; i < 11; i++) {
+            if (i<3) {
+                sum += 0.7 * 1000/i;
+            }
+            else if (i > 6) {
+                sum += 0.8 * 1000/ (i- (i - 5));
+            }
+            
+            else {
+                sum += 1000/i;
+            }
+            
+        }
+        console.log(sum)
+    </script>
+    <script>
+         console.log("Задание №9: ")
+
+         let x=1.825 * (Math.pow(10, 2)) ;
+         let y=18.225 ;
+         let z=-3.298 * (Math.pow(10, -2)) ;
+
+         let a1= (y / x);
+         let a=Math.pow(x, a1) ;
+         let b=Math.cbrt(y / x) ;  
+         let c=Math.abs(a - b) ;
+
+         let resh=y - x;
+         let d=Math.cos(y) - (z / resh);
+
+         let bbb= 1 + (Math.pow(resh, 2));
+         let kk=((y - x) * (d / bbb)) ; 
+
+         let s= c + kk;
+
+
+         console.log("Ответ: " + s);
+
+    </script>
 </head>
