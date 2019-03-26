@@ -84,14 +84,14 @@ div.header > span {
 }
 .table {
     border: 1px solid black;
-    margin: 10px;
+    margin: 20px;
     width: 350px;
     height: 370px;
   }
 .th, td {
     border: 1px solid black;
-    padding: 10px;
-    width: 150px;
-    height: 100px;
+    padding: 8px;
+    width: 154px;
+    height: 101px;
     
 }
