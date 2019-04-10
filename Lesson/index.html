@@ -4,17 +4,73 @@
     <meta charset="UTF-8" />
     <title>My friends</title>
     <link href="./style.css" rel="stylesheet" />
+    <script>
+   
+   window.onload = () => {
+        const inputEmail = document.querySelector('#email');
+
+        const showErrorInContainer = (containerSelector, error) => {
+        const inputContainer = document.querySelector(containerSelector);
+        const isElementExist = inputContainer.querySelector('#error');
+
+         if (!isElementExist) {
+        const div = inputContainer.appendChild(document.createElement('div'));
+        div.innerHTML = error;
+        div.id = 'error';
+        div.style = 'color: red;';
+        } else {
+         isElementExist.innerHTML = error;
+        }
+        };
+
+        const cleanError = (containerSelector) => {
+        const inputContainer = document.querySelector(containerSelector);
+        const errorDiv = inputContainer.querySelector('#error');
+        if (errorDiv) {
+        errorDiv.remove();
+        }
+        }
+
+        const validateEmail = (value) => {
+        if (value.length < 6) {
+        return 'Invalid Email Length';
+        }
+
+        if (value.split('@').length < 2) {
+        return 'Invalid Email Format';
+        }
+
+        return null;
+        }
+                    
+        if (inputEmail) {
+        inputEmail.addEventListener('input', (event) => {
+        const error = validateEmail(event.target.value);
+        const containerSelector = '#email_container';
+
+        if (error) {
+        showErrorInContainer(containerSelector, error);
+        } else {
+        cleanError(containerSelector);
+        }
+        });
+        }
+        }
+    </script>
 </head>
 <body> 
 <div class="header">
 <span>Hello</span>
+<form>
+    <button>Скрыть все картинки</button>
+</form>
 </div>
 <div class="content">
 <div class="menu">
-<form class="signin">
+<form class="signin" id="email_container">
     <span class="form_title">Sign in</span>
-    <input class="input" type="email" placeholder="email">
-    <input class="input" type="password" placeholder="password">
+    <input class="input" type="email" id="email" placeholder="email">
+    <input class="input" type="password" id="password" placeholder="password">
     <button class="btn" type="submit">Sign in</button> 
 </form>
 <form class="signin">
@@ -26,21 +82,20 @@
 </form>
 </div>
 <div class="table">
-        <table>
-                <tr>
-                  <td><a href="cat.html"><img src="https://i.ibb.co/jwc2RHp/Ko.jpg" width="100%" height="100%" alt="Rjn"></a></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                </tr>
-
-              </table>
+  <table>
+   <tr>
+   <td><a href="cat.html"><img id="image" src="https://i.ibb.co/jwc2RHp/Ko.jpg" width="100%" height="100%" alt="Rjn"></a></td>
+   <td><a href="cat.html"><img src="https://i.ibb.co/jwc2RHp/Ko.jpg" width="100%" height="100%" alt="Rjn"></a></td>
+   </tr>
+   <tr>
+   <td><a href="cat.html"><img src="https://i.ibb.co/jwc2RHp/Ko.jpg" width="100%" height="100%" alt="Rjn"></a></td>
+   <td><a href="cat.html"><img src="https://i.ibb.co/jwc2RHp/Ko.jpg" width="100%" height="100%" alt="Rjn"></a></td>
+   </tr>
+   <tr>
+   <td><a href="cat.html"><img src="https://i.ibb.co/jwc2RHp/Ko.jpg" width="100%" height="100%" alt="Rjn"></a></td>
+   <td><a href="cat.html"><img src="https://i.ibb.co/jwc2RHp/Ko.jpg" width="100%" height="100%" alt="Rjn"></a></td>
+   </tr>
+  </table>
 </div>
 </div>
 <div class="footer"></div>
