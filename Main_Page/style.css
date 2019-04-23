@@ -82,14 +82,10 @@ div.header > span {
 .table {
     border: 1px solid black;
     background-color: rgb(221, 164, 6);
-    margin: 20px;
-    width: 350px;
-    height: 440px;
+    margin: 10px;
   }
-.th, td {
+.tr, td {
+  border: 1px solid black;
+  padding: 5px;
 
-    padding: 5px;
-    width: 50%;
-    height: 130px;
-    
 }

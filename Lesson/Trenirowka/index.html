@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link href="./stylezz.css" rel="stylesheet" />
+    <title>Script War</title>
+    <script>
+        const users = [
+            {
+                id: 1, name: "vasya", email: "vasa@gmail.com", phone: 375338889765,
+                adres: "Улица такая-то, дом вот там-то", password: "Vasyan2333"
+            },
+            {
+                id: 2, name: "fasya", email: "vasa@gmail.com", phone: 375338889765,
+                adres: "Улица такая-то, дом вот там-то", password: "Vasyan2333"
+            },
+            {
+                id: 3, name: "jasya", email: "vasa@gmail.com", phone: 375338889765,
+                adres: "Улица такая-то, дом вот там-то", password: "Vasyan2333"
+            },
+            {
+                id: 4, name: "morkowka", email: "vasa@gmail.com", phone: 375338889765,
+                adres: "Улица такая-то, дом вот там-то", password: "Vasyan2333"
+            },
+            {
+                id: 5, name: "garpun", email: "vasa@gmail.com", phone: 375338889765,
+                adres: "Улица такая-то, дом вот там-то", password: "Vasyan2333"
+            },
+            {
+                id: 6, name: "smerdiachi", email: "vasa@gmail.com", phone: 375338889765,
+                adres: "Улица такая-то, дом вот там-то", password: "Vasyan2333"
+            },
+            {
+                id: 7, name: "strelyachi", email: "vasa@gmail.com", phone: 375338889765,
+                adres: "Улица такая-то, дом вот там-то", password: "Vasyan2333"
+            },
+            {
+                id: 8, name: "vasya", email: "vasa@gmail.com", phone: 375338889765,
+                adres: "Улица такая-то, дом вот там-то", password: "Vasyan2333"
+            },
+            {
+                id: 9, name: "vasya", email: "vasa@gmail.com", phone: 375338889765,
+                adres: "Улица такая-то, дом вот там-то", password: "Vasyan2333"
+            },
+            {
+                id: 10, name: "vasya", email: "vasa@gmail.com", phone: 375338889765,
+                adres: "Улица такая-то, дом вот там-то", password: "Vasyan2333", photo: " <img width=350px, height=250px src = 'https://rastenievod.com/wp-content/uploads/2016/06/1-63-700x609.jpg'></img>",
+            },
+        ];
+        window.onload = () => {
+            const tableElement = document.querySelector('#table');
+            const table = document.createElement('table');
+
+            users.forEach((user) => {
+                const tr = document.createElement('tr');
+
+                Object.keys(user).forEach((key) => {
+                    const cell = document.createElement('td');
+                    cell.innerHTML = user[key];
+
+                    tr.appendChild(cell);
+                });
+
+                table.appendChild(tr);
+            });
+
+            tableElement.appendChild(table);
+        }
+
+    </script>
+    <script>
+        let fruits = ['Яблоко', 'Банан'];
+        fruits.forEach(function (item, index) {
+            console.log(item, index);
+        });
+    </script>
+    <script>
+        var arr = ['a', 'b', 'c', 'd', 'e'];
+
+        arr.forEach(function (elem, index) {
+            document.write(index + '. ' + elem + '<br>');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="table">
+    </div>
+</body>
+
+</html>
